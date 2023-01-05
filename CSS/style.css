@@ -79,20 +79,22 @@ body {
   text-decoration: none;
   color: #1b1d1f;
 }
-.header__active a {
-  color: #46b1de;
-}
 .nav a:hover {
-  color: rgb(192, 15, 15);
+  color: #46b1de;
 }
 .header__phone {
   display: flex;
-  flex-direction: row;
   max-width: 174px;
   width: 100%;
-  height: 24px;
-  text-align: center;
   padding-left: 81px;
+}
+.header__phone::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  padding-left: 5px;
+  background-image: url(../img/-phone-in-talk_90490\ 1.png);
+  background-repeat: no-repeat;
 }
 .header__phone1 {
   display: none;
@@ -100,13 +102,11 @@ body {
 .header__phone a {
   display: flex;
   align-self: center;
-  font-size: 16px;
-  line-height: 19px;
   color: #1b1d1f;
   text-decoration: none;
 }
 .header__phone a:hover {
-  color: rgb(192, 15, 15);
+  color: #46b1de;
 }
 .language {
   display: flex;
@@ -120,16 +120,19 @@ body {
 }
 .language__ua {
   font-weight: bold;
+  padding-right: 11px;
+}
+.language__ua::after {
+  content: "";
+  border-right: 1px solid black;
+  padding: 0 5px;
 }
 .language a {
   color: #000000;
   text-decoration: none;
 }
 .language a:hover {
-  color: rgb(192, 15, 15);
-}
-.language p {
-  padding: 0 11px 0 11px;
+  color: #46b1de;
 }
 .header__content {
   margin: 34px 0 48px 110px;
@@ -456,6 +459,10 @@ form {
   text-align: center;
   color: rgba(27, 29, 31, 0.51);
 }
+#form__text:hover,
+#form__tel:hover {
+  border: 2px solid #46b1de;
+}
 #form__submit {
   width: 180px;
   height: 57px;
@@ -547,7 +554,7 @@ footer {
 }
 .footer__menu a:hover,
 .footer__language a:hover {
-  color: rgb(192, 15, 15);
+  color: #ffffff;
 }
 .footer__language {
   display: flex;
@@ -563,11 +570,12 @@ footer {
 }
 .active {
   font-weight: bold;
-  border-right: 1px solid #000;
-  padding-right: 10px;
+  padding-right: 11px;
 }
-.not__active {
-  padding-left: 10px;
+.active::after {
+  content: "";
+  border-right: 1px solid black;
+  padding: 0 5px;
 }
 .footer__time1 {
   position: absolute;
@@ -597,16 +605,91 @@ footer {
   color: #ffffff;
   margin: 60px 0 0 377px;
 }
-.footer__right img {
-  vertical-align: middle;
-  padding-right: 15px;
-}
 .footer__contacts {
+  width: 183px;
   font-weight: 600;
   font-size: 34px;
   line-height: 40px;
   text-align: center;
   padding-bottom: 20px;
+}
+.footer__phone {
+  position: relative;
+  width: 225px;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 43px;
+}
+.footer__phone::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-image: url(../img/2849835-call-cell-communication-interface-multimedia-phone-telephone_108000\ 1.png);
+}
+.footer__phone:hover::after {
+  position: absolute;
+  content: "";
+  background: #ffffff;
+  left: 43px;
+  bottom: 5px;
+  width: 182px;
+  height: 1px;
+}
+.footer__socnetwork img {
+  padding-right: 20px;
+}
+.footer__inst {
+  position: relative;
+  width: 140px;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 40px;
+}
+.footer__inst::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/icons8-instagram\ 1.png);
+}
+.footer__inst:hover::after {
+  position: absolute;
+  content: "";
+  background: #ffffff;
+  left: 40px;
+  bottom: 5px;
+  width: 85px;
+  height: 1px;
+}
+.footer__mail {
+  position: relative;
+  width: 250px;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 38px;
+}
+.footer__mail::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(../img/Email_icon-icons.com_55919\ 1.png);
+}
+.footer__mail:hover::after {
+  position: absolute;
+  content: "";
+  background: #ffffff;
+  left: 38px;
+  bottom: 5px;
+  width: 190px;
+  height: 1px;
 }
 .copy {
   position: absolute;
@@ -823,6 +906,15 @@ footer {
     height: 15px;
     padding: 34px 0 0 3px;
   }
+  .header__phone1::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    padding-left: 3px;
+    background-image: url(../img/-phone-in-talk_90490\ 1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .header__phone1 a {
     font-size: 12px;
     line-height: 14px;
@@ -831,7 +923,7 @@ footer {
     text-decoration: none;
   }
   .header__phone1 a:hover {
-    color: rgb(219, 111, 22);
+    color: #46b1de;
   }
   .header__content {
     margin: 0;
@@ -1129,9 +1221,6 @@ footer {
   .footer__menu a {
     font-size: 14px;
   }
-  .footer__active {
-    color: #ffffff !important;
-  }
   .footer__language {
     width: 53px;
     height: 16px;
@@ -1143,13 +1232,13 @@ footer {
   }
   .footer__menu a:hover,
   .footer__language a:hover {
-    color: rgb(219, 111, 22);
+    color: #ffffff;
   }
   .active {
     padding-right: 8px;
   }
-  .not__active {
-    padding-left: 8px;
+  .active::after {
+    padding: 0 4px;
   }
   .footer__time1 {
     left: 180.52px;
@@ -1177,6 +1266,44 @@ footer {
   }
   .footer__address {
     padding-bottom: 26px;
+  }
+  .footer__phone {
+    width: 194px;
+    padding-left: 37px;
+  }
+  .footer__phone::before {
+    top: -3px;
+    width: 24px;
+    height: 24px;
+  }
+  .footer__phone:hover::after {
+    left: 36px;
+    bottom: -3px;
+    width: 155px;
+  }
+  .footer__inst {
+    display: block;
+    width: 124px;
+    padding-left: 38px;
+  }
+  .footer__inst::before {
+    top: 0;
+  }
+  .footer__inst:hover::after {
+    left: 36px;
+    bottom: 3px;
+    width: 75px;
+  }
+  .footer__mail {
+    width: 223px;
+    padding-left: 40px;
+  }
+  .footer__mail::before {
+    top: -6px;
+  }
+  .footer__mail:hover::after {
+    bottom: -2px;
+    width: 163px;
   }
   .copy {
     position: static;
